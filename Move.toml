@@ -1,0 +1,18 @@
+[package]
+name = "batch-airdrop"
+version = "1.0.0"
+authors = []
+upgrade_policy = "compatible"
+
+[addresses]
+custom_token = "_"
+
+[dev-addresses]
+custom_token = "0xCAFE"
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-core.git"
+rev = "mainnet"
+subdir = "aptos-move/framework/aptos-framework"
+
+[dev-dependencies]
