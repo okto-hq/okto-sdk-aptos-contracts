@@ -7,6 +7,7 @@ import {
 } from "@aptos-labs/ts-sdk";
 
 async function mintToken(aptos: Aptos, to: string) {
+  // TODO: Add Contract Wallet Private Key, used during contract deployment
   const pk = "{{PRIVATE_KEY}}";
 
   const privateKey = new Ed25519PrivateKey(pk);
@@ -36,4 +37,5 @@ async function mintToken(aptos: Aptos, to: string) {
 const config = new AptosConfig({ network: Network.MAINNET });
 const aptos = new Aptos(config);
 
+// TODO: Add CENTRAL_WALLET_ADDRESS (Treasury Wallet Public Address)
 mintToken(aptos, "{{CENTRAL_WALLET_ADDRESS}}");
